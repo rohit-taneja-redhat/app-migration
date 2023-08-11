@@ -1,7 +1,7 @@
 FROM registry.redhat.io/rhel9/nodejs-16:1-116.1690899125 as builder
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
-RUN yarn
+RUN npm install --global yarn && yarn
 COPY . ./
 RUN yarn build
 
