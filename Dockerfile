@@ -1,4 +1,4 @@
-FROM registry.redhat.io/rhel9/nodejs-16-minimal:1-126 as builder
+FROM registry.redhat.io/rhel9/nodejs-16:1-116.1690899125 as builder
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
 RUN yarn
