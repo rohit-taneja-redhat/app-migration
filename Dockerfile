@@ -5,7 +5,7 @@ ONBUILD RUN npm install
 ONBUILD COPY . .
 ONBUILD RUN npm run build
 
-FROM registry.redhat.io/rhel9/nginx-120:1-116-source
+FROM registry.access.redhat.com/ubi8/nginx-120:1-117
 COPY --from=builder /usr/src/app/build /app
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
