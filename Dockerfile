@@ -6,6 +6,6 @@ ONBUILD COPY . .
 ONBUILD RUN npm run build
 
 FROM registry.access.redhat.com/ubi8/nginx-120:1-117
-COPY --from=builder /usr/src/app/build /app
+COPY --from=builder /opt/app-root/src/build /usr/share/nginx/html
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
