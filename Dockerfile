@@ -22,9 +22,7 @@ FROM registry.redhat.io/rhel8/nginx-122:1-23
 
 # RUN chmod +x /usr/bin/start-nginx.sh
 
-USER 0
-
-COPY --from=builder /opt/app-root/src/build /usr/share/nginx/html
+COPY --from=builder /opt/app-root/src/build /opt/app-root/src
 # COPY ./nginx.conf /etc/nginx/nginx.conf
 
 # RUN chmod -R a+rw /opt/app
