@@ -25,7 +25,7 @@ FROM registry.redhat.io/rhel8/nginx-122:1-23
 USER 0
 
 COPY --from=builder /opt/app-root/src/build /usr/share/nginx/html
-COPY ./nginx.conf /etc/nginx/nginx.conf
+# COPY ./nginx.conf /etc/nginx/nginx.conf
 
 USER 1001
 
