@@ -5,6 +5,6 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM registry.access.redhat.com/ubi8/nginx-120:1-117
+FROM registry.redhat.io/rhel8/nginx-122:1-23
 COPY --from=builder /opt/app-root/src/build/ /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]
