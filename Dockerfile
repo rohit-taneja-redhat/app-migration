@@ -6,5 +6,5 @@ COPY . .
 RUN npm run build
 
 FROM registry.redhat.io/rhel8/nginx-122:1-23
-COPY --from=builder /opt/app-root/src/build/ /usr/share/nginx/html
+COPY --from=builder /opt/app-root/src/build /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]
