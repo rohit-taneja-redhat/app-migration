@@ -27,8 +27,6 @@ USER 0
 COPY --from=builder /opt/app-root/src/build /usr/share/nginx/html
 # COPY ./nginx.conf /etc/nginx/nginx.conf
 
-USER 1001
-
 # RUN chmod -R a+rw /opt/app
 
 CMD ["nginx", "-g", "daemon off;"]
