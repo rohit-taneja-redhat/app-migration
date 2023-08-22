@@ -1,0 +1,11 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: app-migration-frontend
+spec:
+  to:
+    kind: Service
+    name: app-migration-frontend
+    weight: 100
+  port:
+    targetPort: 8080

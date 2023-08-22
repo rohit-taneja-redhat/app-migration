@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-migration-frontend
+spec:
+  selector:
+    matchLabels:
+      app: app-migration-frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app-migration-frontend
+    spec:
+      containers:
+        - name: app-migration-frontend
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/{NAMESPACE}/{IMAGE_NAME}:{IMAGE_SHA}
+          ports:
+            - containerPort: 8080
