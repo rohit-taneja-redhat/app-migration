@@ -15,6 +15,6 @@ spec:
       containers:
         - name: app-migration-frontend
           image: >-
-            image-registry.openshift-image-registry.svc:5000/{NAMESPACE}/{IMAGE_NAME}:{IMAGE_SHA}
+            image-registry.openshift-image-registry.svc:5000/app-migration-build/app-migration-image-build@sha256:5591161ad92cadf18e8d1971c407c1421f57f1ee3fd596bd553f55b428b527c1
           ports:
             - containerPort: 8080
