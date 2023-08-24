@@ -1,3 +1,4 @@
+# checking if worklfows work
 FROM registry.redhat.io/rhel9/nodejs-16:1-116.1690899125 as builder
 WORKDIR /opt/app-root/src
 COPY package.json ./
