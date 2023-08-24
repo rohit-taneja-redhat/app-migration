@@ -13,7 +13,7 @@ jobs:
       uses: redhat-actions/podman-login@v1
       with:
         username: rtaneja@redhat.com
-        password: ${{ env.REGISTRY_PASSWORD }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
         registry: registry.redhat.io
 
     - name: Build Image
