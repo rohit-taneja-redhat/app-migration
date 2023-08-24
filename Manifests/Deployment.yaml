@@ -15,6 +15,6 @@ spec:
       containers:
         - name: app-migration-frontend
           image: >-
-            image-registry.openshift-image-registry.svc:5000/app-migration-build/app-migration-image-build@sha256:5591161ad92cadf18e8d1971c407c1421f57f1ee3fd596bd553f55b428b527c1
+            quay.io/rtaneja/app-migration-image-build@sha256:ffbf10cebf2e4ff0ea8bd30def65dbc51199431a3f5f4eea4b702ece0ae1c6e8
           ports:
             - containerPort: 8080
