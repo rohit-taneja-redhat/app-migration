@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Values.appmodel.name | default app-migration-frontend}}
+  name: app-migration-frontend
   label:
     env: {{ .Values.appmodel.env }}
 spec:
   selector:
-    app: {{ .Values.appmodel.name }}
+    app: app-migration-frontend
   ports:
     - protocol: TCP
       port: 8080

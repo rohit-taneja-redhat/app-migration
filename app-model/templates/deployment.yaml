@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.appmodel.name }}
+  name: app-migration-frontend
   label:
     env: {{ .Values.appmodel.env }}
 spec:
   selector:
     matchLabels:
-      app: {{ .Values.appmodel.name }}
+      app: app-migration-frontend
   replicas: 1
   template:
     metadata:
       labels:
-        app: {{ .Values.appmodel.name }}
+        app: app-migration-frontend
     spec:
       containers:
-        - name: {{ .Values.appmodel.name }}
+        - name: app-migration-frontend
           image: {{ .Values.appmodel.image }}
           ports:
             - containerPort: 8080
