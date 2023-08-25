@@ -1,7 +1,7 @@
 appmodel:
-  name: app-migration-frontend-rohit
+  name: app-migration-frontend
   env: dev
-  image: image-registry.openshift-image-registry.svc:5000/app-migration-build/app-migration-image-build@sha256:5591161ad92cadf18e8d1971c407c1421f57f1ee3fd596bd553f55b428b527c1
+  image: quay.io/rtaneja/app-migration-image-build@sha256:1a13a9422701c5147ca25204fea86ff23464ed0dc8568399f2f8e6ea922a1b3a
   resources:
     limits:
       cpu: 0.3

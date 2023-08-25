@@ -1,6 +1,6 @@
 appmodel:
   env: acc
-  image: image-registry.openshift-image-registry.svc:5000/app-migration-build/app-migration-image-build@sha256:1a13a9422701c5147ca25204fea86ff23464ed0dc8568399f2f8e6ea922a1b3a
+  image: quay.io/rtaneja/app-migration-image-build@sha256:1a13a9422701c5147ca25204fea86ff23464ed0dc8568399f2f8e6ea922a1b3a
   resources:
     limits:
       cpu: 0.2
