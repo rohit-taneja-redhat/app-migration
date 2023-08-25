@@ -1,0 +1,13 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: {{ .Values.appmodel.name }}
+  label:
+    env: {{ .Values.appmodel.env }}
+spec:
+  to:
+    kind: Service
+    name: {{ .Values.appmodel.name }}
+    weight: 100
+  port:
+    targetPort: 8080

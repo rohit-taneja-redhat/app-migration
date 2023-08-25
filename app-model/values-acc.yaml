@@ -1,0 +1,14 @@
+appmodel:
+  env: acc
+  image: image-registry.openshift-image-registry.svc:5000/app-migration-build/app-migration-image-build@sha256:1a13a9422701c5147ca25204fea86ff23464ed0dc8568399f2f8e6ea922a1b3a
+  resources:
+    limits:
+      cpu: 0.2
+      memory: 500Mi
+    requests:
+      cpu: 0.2
+      memory: 500Mi
+  enabled: false
+# how to build image for local changes
+# large amounts of images will be in the nexus server
+# How to integrate argo in this?
