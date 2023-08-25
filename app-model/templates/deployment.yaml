@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-migration-frontend
-  label:
+  labels:
     env: {{ .Values.appmodel.env }}
 spec:
   selector:
