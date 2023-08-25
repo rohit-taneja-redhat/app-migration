@@ -9,7 +9,9 @@ appmodel:
     requests:
       cpu: 0.3
       memory: 500Mi
-    enabled: false
+
+hpa:    
+  enabled: false
 # how to build image for local changes
 # large amounts of images will be in the nexus server
 # How to integrate argo in this?
