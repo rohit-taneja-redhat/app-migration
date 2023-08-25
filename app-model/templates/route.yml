@@ -2,7 +2,7 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: app-migration-frontend
-  label:
+  labels:
     env: {{ .Values.appmodel.env }}
 spec:
   to:
