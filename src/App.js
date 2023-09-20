@@ -17,6 +17,7 @@ function App() {
         >
           Learn React
         </a>
+        <h6>My Name is {process.env.REACT_APP_NAME_VARIABLE}</h6>
       </header>
     </div>
   );
